@@ -32,14 +32,15 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-  &quot;codigo&quot;: &quot;A001&quot;,&#xd;
-  &quot;nombre&quot;: &quot;Gabriel Garcia Marquez&quot;,&#xd;
+  &quot;codigo&quot;: &quot;A${randomCode}&quot;,&#xd;
+  &quot;nombre&quot;: &quot;Autor de Prueba ${randomCode}&quot;,&#xd;
   &quot;nacionalidad&quot;: {&#xd;
     &quot;id&quot;: 1,&#xd;
     &quot;nombre&quot;: &quot;Colombiana&quot;&#xd;
   },&#xd;
   &quot;libros&quot;: []&#xd;
-}</stringProp>
+}&#xd;
+</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -48,10 +49,6 @@
         <hashTree>
           <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
             <collectionProp name="HeaderManager.headers">
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name"></stringProp>
-                <stringProp name="Header.value"></stringProp>
-              </elementProp>
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">Content-Type</stringProp>
                 <stringProp name="Header.value">application/json</stringProp>
@@ -170,6 +167,15 @@
           </objProp>
           <stringProp name="filename"></stringProp>
         </ResultCollector>
+        <hashTree/>
+        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random - Codigo Autor">
+          <stringProp name="maximumValue">999</stringProp>
+          <stringProp name="minimumValue">100</stringProp>
+          <stringProp name="outputFormat"></stringProp>
+          <boolProp name="perThread">true</boolProp>
+          <stringProp name="randomSeed"></stringProp>
+          <stringProp name="variableName">randomCode</stringProp>
+        </RandomVariableConfig>
         <hashTree/>
       </hashTree>
     </hashTree>
